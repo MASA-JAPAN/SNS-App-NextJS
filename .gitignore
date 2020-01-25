@@ -18,4 +18,4 @@ yarn-error.log*
 /.next
 
 #firebase
-pages/api/config.js
+config.js

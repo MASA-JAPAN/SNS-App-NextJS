@@ -7,6 +7,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Button from "@material-ui/core/Button";
 import ThumbUpIcon from "@material-ui/icons/ThumbUp";
 import Grid from "@material-ui/core/Grid";
+import Router from "next/router";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -53,6 +54,7 @@ function Copyright() {
 
 export default function Index() {
   const classes = useStyles();
+
   return (
     <div>
       <AppBar position="static">
@@ -91,6 +93,15 @@ export default function Index() {
           >
             One of my portfolios
           </Typography>
+        </Grid>
+        <Grid item>
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={() => Router.push("/signup")}
+          >
+            Get Started
+          </Button>
         </Grid>
         <Grid item>
           <img src="/profile2.png" alt="" className={classes.img} />
