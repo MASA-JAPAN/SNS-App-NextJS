@@ -7,7 +7,8 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Button from "@material-ui/core/Button";
 import ThumbUpIcon from "@material-ui/icons/ThumbUp";
 import Grid from "@material-ui/core/Grid";
-import Router from "next/router";
+// import Router from "next/router";
+import firebase from "firebase";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -55,6 +56,19 @@ function Copyright() {
 export default function Index() {
   const classes = useStyles();
 
+  const handleAuth = () => {
+    const provider = new firebase.auth.GoogleAuthProvider();
+    firebase
+      .auth()
+      .signInWithPopup(provider)
+      .then(function(result) {
+        console.log(result);
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
+  };
+
   return (
     <div>
       <AppBar position="static">
@@ -98,7 +112,7 @@ export default function Index() {
           <Button
             variant="contained"
             color="primary"
-            onClick={() => Router.push("/signup")}
+            onClick={() => handleAuth()}
           >
             Get Started
           </Button>
