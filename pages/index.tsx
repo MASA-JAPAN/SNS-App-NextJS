@@ -7,7 +7,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Button from "@material-ui/core/Button";
 import ThumbUpIcon from "@material-ui/icons/ThumbUp";
 import Grid from "@material-ui/core/Grid";
-// import Router from "next/router";
+import Router from "next/router";
 import firebase from "firebase";
 
 const useStyles = makeStyles((theme: Theme) =>
