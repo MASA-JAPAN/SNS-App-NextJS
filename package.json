@@ -1,36 +1,19 @@
 {
-  "name": "nextjs-with-typescript",
-  "version": "4.0.0",
-  "private": true,
-  "dependencies": {
-    "@material-ui/core": "^4.8.3",
-    "@material-ui/icons": "^4.5.1",
-    "clsx": "latest",
-    "compression": "^1.7.4",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "express-session": "^1.17.0",
-    "express-validator": "^6.3.1",
-    "firebase": "^7.7.0",
-    "helmet": "^3.21.2",
-    "logger": "0.0.1",
-    "morgan": "^1.9.1",
-    "next": "latest",
-    "passport": "^0.4.1",
-    "react": "latest",
-    "react-dom": "latest",
-    "request": "^2.88.0"
-  },
+  "name": "custom-server-express",
+  "version": "1.0.0",
   "scripts": {
-    "dev": "nodemon server/app.js --watch server",
+    "dev": "node server.js",
     "build": "next build",
-    "start": "next start"
+    "start": "cross-env NODE_ENV=production node server.js"
   },
-  "devDependencies": {
-    "@types/next": "latest",
-    "@types/node": "^13.1.8",
-    "@types/react": "latest",
-    "@types/react-dom": "latest",
-    "typescript": "latest"
+  "dependencies": {
+    "@material-ui/core": "^4.9.0",
+    "@material-ui/icons": "^4.5.1",
+    "cross-env": "^5.2.0",
+    "express": "^4.14.0",
+    "helmet": "^3.21.2",
+    "next": "latest",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
   }
 }
